@@ -8,7 +8,6 @@
           <include name="clickOnCreateButton"/>
           <include name="steUp"/>
           <include name="closeBrowser"/>
-          <include name="verifySchedulePage"/>
         </methods>
       </class> <!-- com.createAssessment.fastrackTestcases.FastrackCreateAssessment -->
     </classes>
