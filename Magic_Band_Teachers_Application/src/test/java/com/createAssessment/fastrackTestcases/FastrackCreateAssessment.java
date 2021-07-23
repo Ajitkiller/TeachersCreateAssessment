@@ -118,7 +118,7 @@ public class FastrackCreateAssessment extends BaseClass{
 		reviewPage.verifyReportFunctionality();
 		System.out.println("pass report functionality");
 		System.out.println("pass function");*/
-		Thread.sleep(4000);
+		Thread.sleep(6000);
 		reviewPage.clickOnNextButton();
 		System.out.println("Review page Next button clicking successfully");
 	}
@@ -144,9 +144,10 @@ public class FastrackCreateAssessment extends BaseClass{
 		System.out.println("Assign button clicking successfully");
 	}
 
-//	@Test(priority = 6)
+	@Test(priority = 6)
 	public void clickOnConfirmButton() throws InterruptedException {
 		SchedulePage schedulePage=new SchedulePage(driver);
+		schedulePage.verifyTextOnAssignConfirmationBox();
 		Thread.sleep(1000);
 		schedulePage.clickOnConfirmButton();
 
@@ -157,9 +158,12 @@ public class FastrackCreateAssessment extends BaseClass{
 		FeedbackPage feedbackPage=new FeedbackPage(driver);
 		Thread.sleep(15000);
 		feedbackPage.verifyFeedbackText();
+		feedbackPage.verifyResultdate();
+		feedbackPage.clickOnPDFButton(driver);
+		feedbackPage.clickOnShareButton();
+		Thread.sleep(2000);
 		feedbackPage.createAssessmentPage();
-
-
+		System.out.println("Assessment created successfully");
 	}
 
 

@@ -84,6 +84,13 @@ WebDriver ldriver;
 	@CacheLookup
 	WebElement cancelButton;
 	
+	@FindBy(xpath="//div[@class='modal-body']//h5")
+	@CacheLookup
+	WebElement confirmBoxText;
+	
+	
+	
+	
 	public void assigneeListDropdown() {
 		btnAssignList.click();
 		selectAllStudents.click();
@@ -165,7 +172,18 @@ WebDriver ldriver;
 		testPublishDate.sendKeys(Keys.TAB);
 	}
 	
-	
+	public void verifyTextOnAssignConfirmationBox() {
+		
+		String text = confirmBoxText.getText();
+		
+		if (text.equalsIgnoreCase("Are you sure you want to Assign the assessment?")) {
+			
+			System.out.println("Confirmation text is correct");
+		}
+		else {
+			System.out.println("Confirmation text is wrong");
+		}
+	}
 	
 	
 	
