@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="50345" started-at="2021-07-22T21:45:40 IST" finished-at="2021-07-22T21:46:30 IST">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="50345" started-at="2021-07-22T21:45:40 IST" finished-at="2021-07-22T21:46:30 IST">
+      <class name="com.createAssessment.fastrackTestcases.FastrackCreateAssessment">
+        <test-method status="PASS" signature="steUp()[pri:0, instance:com.createAssessment.fastrackTestcases.FastrackCreateAssessment@6a370f4]" name="steUp" is-config="true" duration-ms="4011" started-at="2021-07-22T21:45:40 IST" finished-at="2021-07-22T21:45:44 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- steUp -->
+        <test-method status="PASS" signature="fastrackLogin()[pri:0, instance:com.createAssessment.fastrackTestcases.FastrackCreateAssessment@6a370f4]" name="fastrackLogin" duration-ms="14556" started-at="2021-07-22T21:45:44 IST" finished-at="2021-07-22T21:45:58 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- fastrackLogin -->
+        <test-method status="PASS" signature="clickOnCreateButton()[pri:1, instance:com.createAssessment.fastrackTestcases.FastrackCreateAssessment@6a370f4]" name="clickOnCreateButton" duration-ms="25136" started-at="2021-07-22T21:45:58 IST" finished-at="2021-07-22T21:46:24 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clickOnCreateButton -->
+        <test-method status="PASS" signature="createTemplateFormat()[pri:2, instance:com.createAssessment.fastrackTestcases.FastrackCreateAssessment@6a370f4]" name="createTemplateFormat" duration-ms="4291" started-at="2021-07-22T21:46:24 IST" finished-at="2021-07-22T21:46:28 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createTemplateFormat -->
+        <test-method status="PASS" signature="clickOnNextButton()[pri:3, instance:com.createAssessment.fastrackTestcases.FastrackCreateAssessment@6a370f4]" name="clickOnNextButton" duration-ms="2256" started-at="2021-07-22T21:46:28 IST" finished-at="2021-07-22T21:46:30 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clickOnNextButton -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.createAssessment.fastrackTestcases.FastrackCreateAssessment@6a370f4]" name="closeBrowser" is-config="true" duration-ms="1" started-at="2021-07-22T21:46:30 IST" finished-at="2021-07-22T21:46:30 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- com.createAssessment.fastrackTestcases.FastrackCreateAssessment -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
