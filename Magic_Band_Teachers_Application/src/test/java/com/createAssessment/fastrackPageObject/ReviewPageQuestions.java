@@ -2,6 +2,7 @@ package com.createAssessment.fastrackPageObject;
 
 import java.util.Iterator;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.CacheLookup;
@@ -44,9 +45,19 @@ WebDriver ldriver;
 		nextButton.click();	
 	}
 	
-	public void clickOnSwapButton() {
+	public void clickOnSwapButton(WebDriver driver) {
 		
-		swapButton.click();	
+		//swapButton.click();	
+		try {
+			WebElement swapButton = driver.findElement(By.xpath("//button[@data-questionnumber='1']//i"));
+			swapButton.click();
+		}
+		catch(org.openqa.selenium.StaleElementReferenceException ex)
+		{
+			WebElement swapButton = driver.findElement(By.xpath("//button[@data-questionnumber='1']//i"));
+			swapButton.click();
+		}
+		
 	}
 	
 	public void clickOnPreviewButton() {
@@ -93,18 +104,28 @@ WebDriver ldriver;
 		
 	}
 	
-	public void previewModelFunctionality() throws InterruptedException {
+	public void previewModelFunctionality(WebDriver driver) throws InterruptedException {
 		
 		btnPreviewSwap.click();	
 		Thread.sleep(4000);
-		for (int i = 0; i < 20; i++) {
-			btnPreviewRightQuestion.click();
+		for (int i = 0; i < 8; i++) {
+			try {
+				WebElement btnPreviewRightQuestion = driver.findElement(By.xpath("//div[@id='preview']//div//div//div//div//div//button//i[@class='fa  fa-caret-right']"));
+				btnPreviewRightQuestion.click();
+			}
+			catch(org.openqa.selenium.StaleElementReferenceException ex)
+			{
+				WebElement btnPreviewRightQuestion = driver.findElement(By.xpath("//div[@id='preview']//div//div//div//div//div//button//i[@class='fa  fa-caret-right']"));
+				btnPreviewRightQuestion.click();
+			}
+			
 			System.out.println("Move to right next question");
 			Thread.sleep(2000);
+			
 			btnPreviewSwap.click();
 			Thread.sleep(3000);
 		}
-		for (int i = 2; i < 20; i++) {
+		for (int i = 2; i < 8; i++) {
 			btnPreviewLeftQuestion.click();
 			System.out.println("Move to Left before question");
 			Thread.sleep(2000);
@@ -124,7 +145,7 @@ WebDriver ldriver;
 	
 	public void clickOnPreviewModelClose() throws InterruptedException {
 		
-		btnPreviewReport.click();	
+		//btnPreviewReport.click();	
 		Thread.sleep(2000);
 		btnReport.click();
 		Thread.sleep(2000);
@@ -176,13 +197,7 @@ WebDriver ldriver;
 	public void verifyReportFunctionality() throws InterruptedException 
 	{
 		
-	/*	for (int i = 0; i < 20; i++) {
-			btnPreviewRightQuestion.click();
-			System.out.println("Move to right next question");
-			Thread.sleep(2000);
-			btnPreviewSwap.click();
-			Thread.sleep(3000);
-		}*/
+	
 		
 		btnPreviewReport.click();	
 		Thread.sleep(2000);

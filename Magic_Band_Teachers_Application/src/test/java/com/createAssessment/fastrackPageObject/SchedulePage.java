@@ -1,5 +1,8 @@
 package com.createAssessment.fastrackPageObject;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -84,6 +87,7 @@ WebDriver ldriver;
 	public void assigneeListDropdown() {
 		btnAssignList.click();
 		selectAllStudents.click();
+		btnAssignList.click();
 	}
 	
 	public void radioQuizButton(String enterNum, WebDriver driver) {
@@ -147,4 +151,26 @@ WebDriver ldriver;
 	public void clickOnCancelButton() {
 		cancelButton.click();
 	}
+	
+	public void enterScheduleAssessmentDate(WebDriver driver) 
+	{
+		testScheduleDate.clear();
+		testScheduleDate.sendKeys("Sat, Jul 24, 14:00 PM");
+		//testScheduleDate.sendKeys(Keys.TAB);
+		testDueDate.clear();
+		testDueDate.sendKeys("Sun, Jul 25, 18:00 PM");
+		testDueDate.sendKeys(Keys.TAB);
+		testPublishDate.clear();
+		testPublishDate.sendKeys("Mon, Jul 26, 20:00 PM");
+		testPublishDate.sendKeys(Keys.TAB);
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
 }

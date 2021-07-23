@@ -212,18 +212,6 @@ public class GeneralDetailsPage {
 	public void moveDifficultyLevel(WebDriver driver) throws InterruptedException {
 
 		WebElement difficultyLevel = driver.findElement(By.xpath("//div[@class='range-slider-box']//div//div[6]"));
-	/*	int location=difficultyLevel.getLocation().y;
-		int xLoc=difficultyLevel.getLocation().x;
-		System.out.println("Y location is "+location);
-		System.out.println("X location is "+xLoc);
-		Actions action=new Actions(driver);
-		try {
-			action.dragAndDropBy(difficultyLevel, 100, location).build().perform();
-		}
-		catch (org.openqa.selenium.interactions.MoveTargetOutOfBoundsException e) {
-			System.out.println("");
-		}*/
-		
 		difficultyLevel.sendKeys(Keys.ARROW_RIGHT);
 		Thread.sleep(1000);
 		difficultyLevel.sendKeys(Keys.ARROW_RIGHT);
@@ -362,7 +350,11 @@ public class GeneralDetailsPage {
 		pointInput.sendKeys(num);
 	}
 
-
+	public void predefineFormat(WebDriver driver) {
+		
+		driver.findElement(By.xpath("//*[@id='informationDiv']//div//div[2]//div//div//div[2]//div//div[1]//div//div[1]//div//a//div//div[1]")).click();
+			
+		}
 
 
 

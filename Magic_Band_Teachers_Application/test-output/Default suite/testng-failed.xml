@@ -5,10 +5,10 @@
     <classes>
       <class name="com.createAssessment.fastrackTestcases.FastrackCreateAssessment">
         <methods>
+          <include name="clickOnCreateButton"/>
           <include name="steUp"/>
           <include name="closeBrowser"/>
-          <include name="openReviewPageDetails"/>
-          <include name="clickOnNextButton"/>
+          <include name="verifySchedulePage"/>
         </methods>
       </class> <!-- com.createAssessment.fastrackTestcases.FastrackCreateAssessment -->
     </classes>

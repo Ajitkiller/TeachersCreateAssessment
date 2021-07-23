@@ -1,7 +1,10 @@
 package com.createAssessment.fastrackTestcases;
 
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 import com.createAssessment.fastrackPageObject.FeedbackPage;
 import com.createAssessment.fastrackPageObject.GeneralDetailsPage;
@@ -16,7 +19,7 @@ public class FastrackCreateAssessment extends BaseClass{
 	public void fastrackLogin() throws InterruptedException {
 		driver.manage().deleteAllCookies();
 		driver.get(readconfig.getBaseurl());
-
+	
 		WebElement loginButton =driver.findElement(By.xpath("//a[contains(text(),'Login')]"));
 		loginButton.click();
 
@@ -30,6 +33,7 @@ public class FastrackCreateAssessment extends BaseClass{
 		Thread.sleep(2000);
 		WebElement nextButton2 =driver.findElement(By.xpath("//span[contains(text(),'Next')]"));
 		nextButton2.click();
+		
 	}
 	@Test(priority = 1)
 	public void clickOnCreateButton() throws InterruptedException {
@@ -40,13 +44,12 @@ public class FastrackCreateAssessment extends BaseClass{
 		Thread.sleep(4000);
 		auth.verifyAndContinueWithConcents(driver);
 
-		Thread.sleep(3000);*/
+	*/
+		Thread.sleep(4000);
 		WebElement createButton =driver.findElement(By.xpath("//a[contains(text(),'Create')]"));
 		createButton.click();
-	
-		
 		GeneralDetailsPage generalPage=new GeneralDetailsPage(driver);
-
+		Thread.sleep(3000);
 		generalPage.inputAssessmentName("Automation testing");
 		//Thread.sleep(000);
 		generalPage.selectBoardName();
@@ -57,25 +60,27 @@ public class FastrackCreateAssessment extends BaseClass{
 		Thread.sleep(1000);
 		generalPage.selectTopic_Subtopic(driver);
 		
-		Thread.sleep(4000);
+		//Thread.sleep(4000);
 		generalPage.moveDifficultyLevel(driver);
-		
-		
+	
 	}
 	@Test(priority = 2)
 	public void createTemplateFormat() {
 
 		GeneralDetailsPage generalPage=new GeneralDetailsPage(driver);
-		generalPage.clickOnCreateFormat();
+		
+		generalPage.predefineFormat(driver);
+		
+		/*generalPage.clickOnCreateFormat();
 
 		generalPage.SelectMultiChoiceType("20","3", driver);
 		generalPage.SelectFIBType("20","3", driver);
 		generalPage.SelectLongQuestionType("1", "3", driver);
 		generalPage.SelectShortQuestionType("20", "5", driver);
 		generalPage.SelectTrueOrFalseType("20", "1", driver);
-		generalPage.enterFormatName("Test 121");
+		generalPage.enterFormatName("1223");
 		generalPage.clickOnSaveButton(driver);
-		System.out.println("Save button clicking successfully");
+		System.out.println("Save button clicking successfully");*/
 	}
 
 	@Test(priority = 3)
@@ -91,26 +96,34 @@ public class FastrackCreateAssessment extends BaseClass{
 	public void openReviewPageDetails() throws InterruptedException 
 	{
 		ReviewPageQuestions reviewPage=new ReviewPageQuestions(driver);
-		Thread.sleep(5000);
-		reviewPage.clickOnSwapButton();
+		
+	/*	Thread.sleep(5000);
+		reviewPage.clickOnSwapButton(driver);
 		Thread.sleep(4000);
-		reviewPage.clickOnSwapButton();
+		reviewPage.clickOnSwapButton(driver);
+		System.out.println("pass swap");
 		Thread.sleep(4000);
 		reviewPage.clickOnPreviewButton();
 		Thread.sleep(4000);
 		
 		reviewPage.verifyPreviewText();
-		reviewPage.previewModelFunctionality();
+		//reviewPage.previewModelFunctionality(driver);
 		reviewPage.clickPreviewReportButton();
+		System.out.println("pass report");
 		reviewPage.clickOnPreviewModelClose();
+		System.out.println("pass model close");
 		Thread.sleep(2000);
 		reviewPage.clickOnPreviewButton();
+		System.out.println("pass preview button");
 		reviewPage.verifyReportFunctionality();
-	//	reviewPage.clickOnNextButton();
+		System.out.println("pass report functionality");
+		System.out.println("pass function");*/
+		Thread.sleep(4000);
+		reviewPage.clickOnNextButton();
 		System.out.println("Review page Next button clicking successfully");
 	}
 
-//	@Test(priority = 5)
+	@Test(priority = 5)
 	public void verifySchedulePage() throws InterruptedException
 	{
 		SchedulePage schedulePage=new SchedulePage(driver);
@@ -122,6 +135,8 @@ public class FastrackCreateAssessment extends BaseClass{
 		System.out.println("quiz type selected");
 
 		schedulePage.assigneeListDropdown();
+		Thread.sleep(2000);
+		schedulePage.enterScheduleAssessmentDate(driver);
 		schedulePage.allQuestionRequiredCheckbox();
 		schedulePage.dontUseCalculatorCheckbox();
 		schedulePage.eachQuestionCheckbox();
