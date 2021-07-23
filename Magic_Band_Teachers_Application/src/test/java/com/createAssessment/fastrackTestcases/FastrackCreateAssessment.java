@@ -73,7 +73,7 @@ public class FastrackCreateAssessment extends BaseClass{
 		generalPage.SelectLongQuestionType("1", "3", driver);
 		generalPage.SelectShortQuestionType("20", "5", driver);
 		generalPage.SelectTrueOrFalseType("20", "1", driver);
-		generalPage.enterFormatName("Test 11");
+		generalPage.enterFormatName("Test 121");
 		generalPage.clickOnSaveButton(driver);
 		System.out.println("Save button clicking successfully");
 	}
@@ -87,12 +87,25 @@ public class FastrackCreateAssessment extends BaseClass{
 		System.out.println("General page Next button clicking successfully");
 	}
 
-//	@Test(priority = 4)
-	public void openSchedulePage() throws InterruptedException 
+	@Test(priority = 4)
+	public void openReviewPageDetails() throws InterruptedException 
 	{
 		ReviewPageQuestions reviewPage=new ReviewPageQuestions(driver);
 		Thread.sleep(5000);
-		reviewPage.clickSwapButton();
+		reviewPage.clickOnSwapButton();
+		Thread.sleep(4000);
+		reviewPage.clickOnSwapButton();
+		Thread.sleep(4000);
+		reviewPage.clickOnPreviewButton();
+		Thread.sleep(4000);
+		
+		reviewPage.verifyPreviewText();
+		reviewPage.previewModelFunctionality();
+		reviewPage.clickPreviewReportButton();
+		reviewPage.clickOnPreviewModelClose();
+		Thread.sleep(2000);
+		reviewPage.clickOnPreviewButton();
+		reviewPage.verifyReportFunctionality();
 	//	reviewPage.clickOnNextButton();
 		System.out.println("Review page Next button clicking successfully");
 	}
