@@ -2,6 +2,7 @@ package com.createAssessment.fastrackPageObject;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -39,10 +40,7 @@ WebDriver ldriver;
 	@FindBy(xpath="//a[contains(text(),'Create')]")
 	@CacheLookup
 	WebElement createButton;
-	
-	@FindBy(xpath="//a[contains(text(),'Assign')]")
-	@CacheLookup
-	WebElement assignButton;
+
 	
 	@FindBy(xpath="//div[contains(text(),'Filter by Subject')]")
 	@CacheLookup
@@ -56,18 +54,42 @@ WebDriver ldriver;
 	{
 		fractrakParagraph.click();
 	}
-	public void clickOnAssignButton()
-	{
-		assignButton.click();
-	}
+	
 	
 	public void SelectGradeFilter(int i)
 	{
 		Select s1=new Select(subjectFilter);
 		s1.deselectByIndex(i);
 	}
+	@FindBy(xpath="//a[contains(text(),'Monthly Class III')]")
+	@CacheLookup
+	WebElement AssessmentName;
 	
+	@FindBy(xpath="//*[@id=\"card-list\"]/div[1]/div/div/div[1]/div[2]/div/div[2]")
+	@CacheLookup
+	WebElement templateDetails;
 	
+	@FindBy(xpath="//*[@id='card-list']//div[1]//div//div//div[1]//div[2]//div//a")
+	@CacheLookup
+	WebElement assignButton;
+	public void selectAssessment(WebDriver driver) throws InterruptedException {
+		if (AssessmentName.isDisplayed()) {
+			System.out.println("Assessment is available in create assesment home page.");
+			
+			Actions act=new Actions(driver);
+			act.moveToElement(templateDetails).build().perform();
+			Thread.sleep(5000);
+		}
+		
+		
+	}
+	public void clickOnAssignButton() {
+		
+		assignButton.click();
+		
+		
+		
+	}
 	
 	
 	

@@ -3,13 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.createAssessment.fastrackTestcases.FastrackCreateAssessment">
+      <class name="com.createAssessment.fastrackTestcases.ReassignedAssessment">
         <methods>
-          <include name="clickOnCreateButton"/>
           <include name="steUp"/>
           <include name="closeBrowser"/>
+          <include name="verifyFeedbackPage"/>
         </methods>
-      </class> <!-- com.createAssessment.fastrackTestcases.FastrackCreateAssessment -->
+      </class> <!-- com.createAssessment.fastrackTestcases.ReassignedAssessment -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

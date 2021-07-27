@@ -4,11 +4,9 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.Select;
 
 public class GeneralDetailsPage {
 
@@ -157,10 +155,18 @@ public class GeneralDetailsPage {
 	WebElement difficultyLevelOne;
 	
 
-	public void inputAssessmentName(String Aname) 
+	public void inputAssessmentName(String Aname,WebDriver driver) 
 	{
-		assessmentName.clear();
-		assessmentName.sendKeys(Aname);
+		try {
+		WebElement name=driver.findElement(By.xpath("//input[@name='input_title']"));
+		name.clear();
+		name.sendKeys(Aname);
+		}
+		catch(java.lang.NullPointerException e){
+			WebElement name=driver.findElement(By.xpath("//input[@name='input_title']"));
+			name.clear();
+			name.sendKeys(Aname);
+		}
 	}
 
 	public void selectBoardName() throws InterruptedException 

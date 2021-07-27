@@ -1,10 +1,18 @@
 package com.createAssessment.fastrackPageObject;
 
+import java.util.Set;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class FeedbackPage {
 
@@ -86,20 +94,31 @@ WebDriver ldriver;
 	public void clickOnPDFButton(WebDriver driver) throws InterruptedException {
 		
 		pdfButton.click();
-		Thread.sleep(15000);
-		driver.close();
 		
 	}
-	public void clickOnShareButton() throws InterruptedException {
+	public void clickOnShareButton(WebDriver driver) throws InterruptedException {
 		
 		shareButton.click();
 		Thread.sleep(1000);
 		copyLinkButton.click();
 		Thread.sleep(3000);
-		linkModelClose.click();
-		
-		
-		
-		
+		Actions act=new Actions(driver);
+		act.moveToElement(linkModelClose, 0, 438).click().perform();
 	}
+	
+	public void pageScrollByPixel(WebDriver driver) {
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+	
+		 js.executeScript("window.scrollBy(0,1000)");
+	}
+	
+	public void pageScrollTillEnd(WebDriver driver) {
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+	
+		 js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
+	}
+	
+	
+	
+	
 }

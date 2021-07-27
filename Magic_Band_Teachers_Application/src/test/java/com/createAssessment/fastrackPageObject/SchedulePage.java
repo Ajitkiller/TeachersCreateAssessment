@@ -162,13 +162,13 @@ WebDriver ldriver;
 	public void enterScheduleAssessmentDate(WebDriver driver) 
 	{
 		testScheduleDate.clear();
-		testScheduleDate.sendKeys("Sat, Jul 24, 14:00 PM");
+		testScheduleDate.sendKeys("Mon, Jul 26, 14:00 PM");
 		//testScheduleDate.sendKeys(Keys.TAB);
 		testDueDate.clear();
-		testDueDate.sendKeys("Sun, Jul 25, 18:00 PM");
+		testDueDate.sendKeys("Tue, Jul 27, 18:00 PM");
 		testDueDate.sendKeys(Keys.TAB);
 		testPublishDate.clear();
-		testPublishDate.sendKeys("Mon, Jul 26, 20:00 PM");
+		testPublishDate.sendKeys("Thu, Jul 29, 20:00 PM");
 		testPublishDate.sendKeys(Keys.TAB);
 	}
 	

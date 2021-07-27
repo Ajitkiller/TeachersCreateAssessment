@@ -45,7 +45,7 @@ public class FastrackNotification extends BaseClass {
 	//Repetitive Question type in test format: 2
 	//Only 2 sets of one question type are allowed.
 	
-	//@Test(priority = 2)
+	@Test(priority = 2)
 	public void verifyTwoSetOfQuestionType() throws InterruptedException {
 		
 		Thread.sleep(4000);
@@ -55,7 +55,7 @@ public class FastrackNotification extends BaseClass {
 		generalPage.SelectFIBType("20", "2", driver);
 		generalPage.SelectFIBType("25", "1", driver);
 		generalPage.SelectFIBType("35", "2", driver);
-		generalPage.enterFormatName("101Test");
+		generalPage.enterFormatName("123566");
 		generalPage.clickOnSaveButton(driver);
 		Thread.sleep(2000);
 		NotificationErrorValidation validate=new NotificationErrorValidation(driver);
@@ -73,7 +73,7 @@ public class FastrackNotification extends BaseClass {
 	//Maximum 20 characters are allowed.
 	//Duplicate format Name
 	
-	//@Test(priority = 2)
+	@Test(priority = 3)
 	public void verifyFormatNameCharLimit() throws InterruptedException {
 		GeneralDetailsPage generalPage=new GeneralDetailsPage(driver);
 		Thread.sleep(4000);
@@ -83,7 +83,7 @@ public class FastrackNotification extends BaseClass {
 		generalPage.enterFormatName("Only two set of format");
 		generalPage.clickOnSaveButton(driver);
 		NotificationErrorValidation validate=new NotificationErrorValidation(driver);
-		generalPage.enterFormatName("only 20 char support");
+		generalPage.enterFormatName("only 20 char supp");
 		System.out.println("Format name is under 20 character");
 		Thread.sleep(2000);
 		generalPage.clickOnSaveButton(driver);
@@ -100,7 +100,7 @@ public class FastrackNotification extends BaseClass {
 	//Maximum 50 points allowed.
 
 	
-	//@Test(priority = 2)
+	@Test(priority = 4)
 	public void verifyMaxPointLimit() throws InterruptedException {
 		
 		GeneralDetailsPage generalPage=new GeneralDetailsPage(driver);
@@ -113,7 +113,7 @@ public class FastrackNotification extends BaseClass {
 		validate.verifyMaxPointsPerQuestion();
 		validate.requiredFieldText();
 		Thread.sleep(2000);
-		generalPage.enterFormatName("103Test");
+		generalPage.enterFormatName("1000254");
 		Thread.sleep(3000);
 		generalPage.enterNumber("2");
 		generalPage.clickOnSaveButton(driver);
@@ -122,7 +122,7 @@ public class FastrackNotification extends BaseClass {
 	//Questions per each Question type max count: 200
 	//Maximum 200 questions for each question type are allowed. 
 	
-	//@Test(priority = 2)
+	@Test(priority = 5)
 	public void verifyMaxCountLimit() throws InterruptedException {
 		
 	GeneralDetailsPage generalPage=new GeneralDetailsPage(driver);
@@ -136,7 +136,7 @@ public class FastrackNotification extends BaseClass {
 	validate.verifyMaxCountPerQuestions();
 	Thread.sleep(3000);
 	generalPage.enterCount("200");
-	generalPage.enterFormatName("Test104");
+	generalPage.enterFormatName("Test10421");
 	generalPage.clickOnSaveButton(driver);
 	
 	}
@@ -145,7 +145,7 @@ public class FastrackNotification extends BaseClass {
 	//Max 200 questions per test format
 	//You are allowed to add a maximum of 200 questions.
 
-//	@Test(priority = 2)
+@Test(priority = 6)
 	public void verifyTotalQuestionCountLimitForTestFormat() throws InterruptedException {
 		
 		GeneralDetailsPage generalPage=new GeneralDetailsPage(driver);
@@ -158,7 +158,7 @@ public class FastrackNotification extends BaseClass {
 		generalPage.SelectMultiChoiceType("30", "1", driver);
 		generalPage.SelectFIBType("40", "1", driver);
 		Thread.sleep(6000);
-		generalPage.enterFormatName("Test105");
+		generalPage.enterFormatName("Test105125");
 		generalPage.clickOnSaveButton(driver);
 		NotificationErrorValidation validate=new NotificationErrorValidation(driver);
 		validate.verifyMaxCountPerTestFormat();
@@ -168,12 +168,12 @@ public class FastrackNotification extends BaseClass {
 		
 	}
 	
-	@Test(priority = 2)
+	@Test(priority = 7)
 	public void verifyQuestionNotAvailableErrorMessage() throws InterruptedException
 	{
 		Thread.sleep(3000);
 		GeneralDetailsPage generalPage=new GeneralDetailsPage(driver);
-		generalPage.inputAssessmentName("Error message");
+		generalPage.inputAssessmentName("Error message", driver);
 		generalPage.selectBoardName();
 		generalPage.selectGrade9();
 		generalPage.selectSubjectName();

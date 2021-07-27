@@ -11,10 +11,14 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 
 import com.createAssessment.fastrackPageObject.FastrackLoginPage;
+import com.createAssessment.fastrackPageObject.FeedbackPage;
+import com.createAssessment.fastrackPageObject.GeneralDetailsPage;
+import com.createAssessment.fastrackPageObject.ReviewPageQuestions;
+import com.createAssessment.fastrackPageObject.SchedulePage;
 import com.createAssessment.fastrackUtilities.ReadConfig;
 //import org.testng.annotations.Parameters;
 
-//import atu.testrecorder.ATUTestRecorder;
+import atu.testrecorder.ATUTestRecorder;
 public class BaseClass {
 
 	public static Logger log=LogManager.getLogger(BaseClass.class.getName());
@@ -23,8 +27,11 @@ public class BaseClass {
 	public String testUrl=readconfig.getFastrackTestUrl();
 	public static WebDriver driver;
 	public static FastrackLoginPage fastrackLogin;
+	public static ReviewPageQuestions reviewPage;
 	
-//	public static ATUTestRecorder record;
+
+	
+	public static ATUTestRecorder record;
 	//@Parameters("browser")
 	@BeforeClass
 	public void steUp() 
