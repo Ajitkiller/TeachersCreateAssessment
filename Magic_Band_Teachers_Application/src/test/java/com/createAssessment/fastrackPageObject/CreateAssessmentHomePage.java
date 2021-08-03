@@ -1,5 +1,7 @@
 package com.createAssessment.fastrackPageObject;
 
+import java.io.IOException;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -8,8 +10,11 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
-public class CreateAssessmentHomePage {
+import com.createAssessment.fastrackTestcases.BaseClass;
+import com.report.extentReport.ExtentReports1;
 
+public class CreateAssessmentHomePage {
+	BaseClass bc;
 WebDriver ldriver;
 	
 	public CreateAssessmentHomePage(WebDriver rdriver){
@@ -61,7 +66,7 @@ WebDriver ldriver;
 		Select s1=new Select(subjectFilter);
 		s1.deselectByIndex(i);
 	}
-	@FindBy(xpath="//a[contains(text(),'Monthly Class III')]")
+	@FindBy(xpath="//a[contains(text(),'GOKsTrUjxgTXFwA ')]")
 	@CacheLookup
 	WebElement AssessmentName;
 	
@@ -72,16 +77,22 @@ WebDriver ldriver;
 	@FindBy(xpath="//*[@id='card-list']//div[1]//div//div//div[1]//div[2]//div//a")
 	@CacheLookup
 	WebElement assignButton;
-	public void selectAssessment(WebDriver driver) throws InterruptedException {
+	public void selectAssessment(WebDriver driver) throws InterruptedException, IOException {
 		if (AssessmentName.isDisplayed()) {
 			System.out.println("Assessment is available in create assesment home page.");
 			
 			Actions act=new Actions(driver);
 			act.moveToElement(templateDetails).build().perform();
+			bc=new BaseClass();
 			Thread.sleep(5000);
+			ExtentReports1.test.pass("Assessment ");
 		}
-		
-		
+		else {
+			ExtentReports1.createTest("selectAssessment");
+			ExtentReports1.screenshot();
+			
+		}
+				
 	}
 	public void clickOnAssignButton() {
 		

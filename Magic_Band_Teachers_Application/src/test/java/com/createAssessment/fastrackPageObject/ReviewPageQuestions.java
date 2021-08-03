@@ -61,9 +61,18 @@ WebDriver ldriver;
 		
 	}
 	
-	public void clickOnPreviewButton() {
+	public void clickOnPreviewButton(WebDriver driver) {
 		
-		previewButton.click();	
+			
+		try {
+			WebElement swapButton = driver.findElement(By.xpath("//button[@data-id='1']//i"));
+			swapButton.click();
+		}
+		catch(org.openqa.selenium.StaleElementReferenceException ex)
+		{
+			WebElement swapButton = driver.findElement(By.xpath("//button[@data-id='1']//i"));
+			swapButton.click();
+		}
 	}
 	
 	// Preview section Elements list.
@@ -109,7 +118,7 @@ WebDriver ldriver;
 		
 		btnPreviewSwap.click();	
 		Thread.sleep(4000);
-		for (int i = 0; i < 8; i++) {
+		for (int i = 0; i < 3; i++) {
 			try {
 				WebElement btnPreviewRightQuestion = driver.findElement(By.xpath("//div[@id='preview']//div//div//div//div//div//button//i[@class='fa  fa-caret-right']"));
 				btnPreviewRightQuestion.click();
@@ -126,7 +135,7 @@ WebDriver ldriver;
 			btnPreviewSwap.click();
 			Thread.sleep(3000);
 		}
-		for (int i = 2; i < 8; i++) {
+		for (int i = 2; i < 3; i++) {
 			btnPreviewLeftQuestion.click();
 			System.out.println("Move to Left before question");
 			Thread.sleep(2000);

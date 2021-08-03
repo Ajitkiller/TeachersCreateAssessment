@@ -29,7 +29,15 @@ public class GeneralDetailsPage {
 	@FindBy(xpath="//span[contains(text(),'CBSE')]")
 	@CacheLookup
 	WebElement select_CBSE;
-
+	
+	@FindBy(xpath="//span[contains(text(),'Select board')]")
+	@CacheLookup
+	WebElement spanSelectBoard;
+	
+	@FindBy(xpath="//div[contains(text(),'CBSE')]")
+	@CacheLookup
+	WebElement preSelected_CBSE;
+	
 	@FindBy(xpath="//div[contains(text(),'Select grade')]")
 	@CacheLookup
 	WebElement selectGrade;
@@ -125,6 +133,7 @@ public class GeneralDetailsPage {
 	@CacheLookup
 	WebElement saveButton;
 
+	////button[contains(text(),'Next ')][1]
 	@FindBy(xpath="//button[contains(text(),'Next ')][1]")
 	@CacheLookup
 	WebElement btnNext;
@@ -171,8 +180,25 @@ public class GeneralDetailsPage {
 
 	public void selectBoardName() throws InterruptedException 
 	{
+			
+	Thread.sleep(1000);
+	if (selectBoard.isDisplayed()) {
 		selectBoard.click();
 		select_CBSE.click();
+		System.out.println("Board selected");
+	}
+	else {
+		preSelected_CBSE.click();
+		spanSelectBoard.click();
+		System.out.println("Preselected CBSE ");
+		Thread.sleep(1000);
+		selectBoard.click();
+		select_CBSE.click();
+		System.out.println("Select to default & again select CBSE");
+	}
+	
+			
+		
 		Thread.sleep(1000);
 	}
 
@@ -185,6 +211,7 @@ public class GeneralDetailsPage {
 
 	public void selectGrade10() throws InterruptedException 
 	{
+		
 		selectGrade.click();
 		grade10.click();
 		Thread.sleep(1000);

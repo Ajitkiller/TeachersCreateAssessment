@@ -1,5 +1,6 @@
 package com.createAssessment.fastrackTestcases;
 
+import java.io.IOException;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
@@ -20,7 +21,7 @@ public class FastrackCreateAssessment extends BaseClass{
 	FastrackLoginPage fastrackLogin;
 	GeneralDetailsPage generalPage;
 	 ReviewPageQuestions reviewPage;
-	 FeedbackPage feedbackPage;
+	public static FeedbackPage feedbackPage;
 	 
 	@Test
 	public void fastrackLogin() throws InterruptedException, ATUTestRecorderException 
@@ -63,9 +64,9 @@ public class FastrackCreateAssessment extends BaseClass{
 		WebElement createButton =driver.findElement(By.xpath("//a[contains(text(),'Create')]"));
 		createButton.click();
 		Thread.sleep(4000);
-		generalPage=new GeneralDetailsPage(driver);
+		GeneralDetailsPage generalPage=new GeneralDetailsPage(driver);
 		System.out.println("name active");
-		generalPage.inputAssessmentName("Celebration meet", driver);
+		generalPage.inputAssessmentName(randomestring(), driver);
 		generalPage.selectBoardName();
 		Thread.sleep(1000);
 		generalPage.selectGrade10();
@@ -78,6 +79,8 @@ public class FastrackCreateAssessment extends BaseClass{
 	@Test(priority = 5)
 	public void createTemplateFormat() throws InterruptedException 
 	{
+		GeneralDetailsPage generalPage=new GeneralDetailsPage(driver);
+
 		generalPage.predefineFormat(driver);
 	/*	generalPage.clickOnCreateFormat();
 		Thread.sleep(2000);
@@ -86,18 +89,19 @@ public class FastrackCreateAssessment extends BaseClass{
 		generalPage.SelectLongQuestionType("1", "3", driver);
 		generalPage.SelectShortQuestionType("20", "5", driver);
 		generalPage.SelectTrueOrFalseType("20", "1", driver);
-		generalPage.enterFormatName("Happy format");*/
+		generalPage.enterFormatName("Happy format");
 		
 		generalPage.clickOnSaveButton(driver);
-		System.out.println("Save button clicking successfully");
+		System.out.println("Save button clicking successfully");*/
 	}
-
-
 	@Test(priority = 6)
-	public void clickOnNextButton() throws InterruptedException 
+	public void clickOnNextButton() throws InterruptedException, IOException 
 	{
 		Thread.sleep(4000);
+		
 		generalPage.clickOnNextButton();
+		
+		
 		System.out.println("General page Next button clicking successfully");
 	}
 	@Test(priority = 7)
@@ -113,14 +117,16 @@ public class FastrackCreateAssessment extends BaseClass{
 	@Test(priority = 8)
 	public void verifyPreviewText() throws InterruptedException 
 	{
+		ReviewPageQuestions reviewPage=new ReviewPageQuestions(driver);
 		Thread.sleep(4000);
-		reviewPage.clickOnPreviewButton();
+		reviewPage.clickOnPreviewButton(driver);
 		Thread.sleep(4000);
 		reviewPage.verifyPreviewText();
 	}
 	@Test(priority = 9)
 	public void verifyPreviewModelFunctionality() throws InterruptedException 
 	{
+		ReviewPageQuestions reviewPage=new ReviewPageQuestions(driver);
 		reviewPage.previewModelFunctionality(driver);
 		reviewPage.clickPreviewReportButton();
 		System.out.println("pass report");
@@ -130,8 +136,9 @@ public class FastrackCreateAssessment extends BaseClass{
 	@Test(priority = 10)
 	public void verifyReportFunctionality() throws InterruptedException 
 	{
+		ReviewPageQuestions reviewPage=new ReviewPageQuestions(driver);
 		Thread.sleep(2000);
-		reviewPage.clickOnPreviewButton();
+		reviewPage.clickOnPreviewButton(driver);
 		System.out.println("pass preview button");
 		reviewPage.verifyReportFunctionality();
 		System.out.println("pass report functionality");
@@ -139,7 +146,7 @@ public class FastrackCreateAssessment extends BaseClass{
 		reviewPage.clickOnNextButton();
 		System.out.println("Review page Next button clicking successfully");
 	}
-	@Test(priority = 12)
+	@Test(priority = 11)
 	public void selectAssessmentType() throws InterruptedException
 	{
 		SchedulePage schedulePage=new SchedulePage(driver);
@@ -149,20 +156,20 @@ public class FastrackCreateAssessment extends BaseClass{
 		schedulePage.radioQuizButton("200", driver);
 		System.out.println("quiz type selected");
 	}
-	@Test(priority = 13)
+	@Test(priority = 12)
 	public void selectAssigneeList() throws InterruptedException
 	{		SchedulePage schedulePage=new SchedulePage(driver);
 
 		schedulePage.assigneeListDropdown();
 		Thread.sleep(2000);
 	}
-	@Test(priority = 14)
+	@Test(priority = 13)
 	public void selectAssessmentDate() throws InterruptedException
 	{		SchedulePage schedulePage=new SchedulePage(driver);
 
 		schedulePage.enterScheduleAssessmentDate(driver);
 	}
-	@Test(priority = 15)
+	@Test(priority = 14)
 	public void selectTestInstruction() throws InterruptedException
 	{
 		SchedulePage schedulePage=new SchedulePage(driver);
@@ -171,14 +178,14 @@ public class FastrackCreateAssessment extends BaseClass{
 		schedulePage.dontUseCalculatorCheckbox();
 		schedulePage.eachQuestionCheckbox();
 	}
-	@Test(priority = 16)
+	@Test(priority = 15)
 	public void verifyAssignButton() throws InterruptedException
 	{		SchedulePage schedulePage=new SchedulePage(driver);
 
 		schedulePage.clickOnAssignButton();
 		System.out.println("Assign button clicking successfully");
 	}
-	@Test(priority = 17)
+	@Test(priority = 16)
 	public void verifyConfirmationBox() throws InterruptedException {
 		SchedulePage schedulePage=new SchedulePage(driver);
 
@@ -186,29 +193,33 @@ public class FastrackCreateAssessment extends BaseClass{
 		Thread.sleep(1000);
 		schedulePage.clickOnConfirmButton();
 	}
-	@Test(priority = 18)
+	@Test(priority = 17)
 	public void verifyTextAndResultDate() throws InterruptedException, ATUTestRecorderException {
+		FeedbackPage feedbackPage=new FeedbackPage(driver);
 		Thread.sleep(15000);
 		feedbackPage.verifyFeedbackText();
 		feedbackPage.verifyResultdate();
 	}
-	@Test(priority = 19)
+	@Test(priority = 18)
 	public void clickOn_PDF_Button() throws InterruptedException
 	{
+		FeedbackPage feedbackPage=new FeedbackPage(driver);
 		String par=driver.getWindowHandle();
 		Set<String> popup=driver.getWindowHandles();
 		feedbackPage.clickOnPDFButton(driver);
 		driver.switchTo().window(par);
 	}
-	@Test(priority = 20)
+	@Test(priority = 19)
 	public void clickOnShareButton() throws InterruptedException
-	{
-		//feedbackPage.clickOnShareButton(driver);
+	{		FeedbackPage feedbackPage=new FeedbackPage(driver);
+		feedbackPage.clickOnShareButton(driver);
 		Thread.sleep(2000);
 	}
-	@Test(priority = 21)
+	@Test(priority = 20)
 	public void clickOnCreateAssessmentPage() throws InterruptedException, ATUTestRecorderException
 	{
+		FeedbackPage feedbackPage=new FeedbackPage(driver);
+
 		feedbackPage.createAssessmentPage();
 		System.out.println("Assessment created successfully");
 		record.stop();

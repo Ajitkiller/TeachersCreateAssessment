@@ -46,15 +46,27 @@ WebDriver ldriver;
 		createButton.click();
 	}
 	
-	public void clickLoginButton()
+	public void clickLoginButton(WebDriver driver)
 	{
-		loginButton.click();
+		//loginButton.click();
+		try 
+		{
+			WebElement loginButton=	driver.findElement(By.xpath("//a[contains(text(),'Login')]"));
+			loginButton.click();
+		
+		}
+		catch (org.openqa.selenium.NoSuchElementException ex) 
+		{
+			WebElement loginButton=	driver.findElement(By.xpath("//a[contains(text(),'Login')]"));
+			loginButton.click();
+		}
 	}
 	
-	public void enterEmailId(WebDriver driver)
+	public void enterEmailId(WebDriver driver,String email)
 	{
 		WebElement emailId =driver.findElement(By.xpath("//input[@id='identifierId']"));
-		emailId.sendKeys("teacher1@webcraft.co.in");
+		emailId.clear();
+		emailId.sendKeys(email);
 	}
 	
 	public void clickNextButton()
@@ -69,6 +81,7 @@ WebDriver ldriver;
 	
 	public void enterPassword(String pass)
 	{
+		password.clear();
 		password.sendKeys(pass);
 	}
 	

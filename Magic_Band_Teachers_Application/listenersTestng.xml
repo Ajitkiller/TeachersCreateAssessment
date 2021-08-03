@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="Magic Band">
+	<listeners>
+    	<listener class-name="com.createAssessment.fastrackUtilities.TestListener"/>
+  </listeners>
+  
+  <test name="Fastrack test format">
+  <parameter name="browser" value="chrome" />
+    <classes>
+      <class name="com.createAssessment.fastrackTestcases.ReassignedAssessment" >
+      </class>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

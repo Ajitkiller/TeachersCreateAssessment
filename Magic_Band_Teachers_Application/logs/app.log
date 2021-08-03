@@ -1,0 +1,149 @@
+30:07 - 10:33:23 INFO c.c.f.BaseClass [main] - Login button clicking successfully
+30:07 - 10:33:23 INFO c.c.f.BaseClass [main] - clear email input area.
+30:07 - 10:33:24 INFO c.c.f.BaseClass [main] - email entered successfully
+30:07 - 10:33:26 INFO c.c.f.BaseClass [main] - clear password input area.
+30:07 - 10:33:26 INFO c.c.f.BaseClass [main] - password entered successfully
+30:07 - 10:33:28 INFO c.c.f.BaseClass [main] - Clicking next button successfully
+30:07 - 10:33:42 INFO c.c.f.BaseClass [main] - Verify assessment is present.
+30:07 - 10:33:45 INFO c.c.f.BaseClass [main] - Clicking assessment Assign button successfully
+30:07 - 10:33:49 INFO c.c.f.BaseClass [main] - Clicking Review page next button successfully
+30:07 - 10:34:04 INFO c.c.f.BaseClass [main] - Select all students from assignee list
+30:07 - 10:34:05 INFO c.c.f.BaseClass [main] - Clicking Quiz radio button successfully
+30:07 - 10:34:05 INFO c.c.f.BaseClass [main] - Clicking Schedule page Assign button
+30:07 - 10:36:54 INFO c.c.f.BaseClass [main] - Login button clicking successfully
+30:07 - 10:36:55 INFO c.c.f.BaseClass [main] - clear email input area.
+30:07 - 10:36:55 INFO c.c.f.BaseClass [main] - email entered successfully
+30:07 - 10:36:57 INFO c.c.f.BaseClass [main] - clear password input area.
+30:07 - 10:36:57 INFO c.c.f.BaseClass [main] - password entered successfully
+30:07 - 10:36:59 INFO c.c.f.BaseClass [main] - Clicking next button successfully
+30:07 - 10:37:12 INFO c.c.f.BaseClass [main] - Verify assessment is present.
+30:07 - 10:37:14 INFO c.c.f.BaseClass [main] - Clicking assessment Assign button successfully
+30:07 - 10:37:18 INFO c.c.f.BaseClass [main] - Clicking Review page next button successfully
+30:07 - 10:37:34 INFO c.c.f.BaseClass [main] - Select all students from assignee list
+30:07 - 10:37:34 INFO c.c.f.BaseClass [main] - Clicking Quiz radio button successfully
+30:07 - 10:37:35 INFO c.c.f.BaseClass [main] - Clicking Schedule page Assign button
+30:07 - 10:37:35 INFO c.c.f.BaseClass [main] - Verify Assign confirmation box test
+30:07 - 10:37:35 INFO c.c.f.BaseClass [main] - Click on Confirm button
+30:07 - 10:37:59 INFO c.c.f.BaseClass [main] - Clicking pdf button successfully
+30:07 - 10:38:01 INFO c.c.f.BaseClass [main] - Page scroll till end
+30:07 - 10:38:11 INFO c.c.f.BaseClass [main] - Switching PDF window to main window
+30:07 - 10:38:16 INFO c.c.f.BaseClass [main] - Clicking share button successfully
+30:07 - 10:38:18 INFO c.c.f.BaseClass [main] - Clicking create assessment button
+30:07 - 10:41:26 INFO c.c.f.BaseClass [main] - Login button clicking successfully
+30:07 - 10:41:26 INFO c.c.f.BaseClass [main] - clear email input area.
+30:07 - 10:41:27 INFO c.c.f.BaseClass [main] - email entered successfully
+30:07 - 10:41:29 INFO c.c.f.BaseClass [main] - clear password input area.
+30:07 - 10:41:29 INFO c.c.f.BaseClass [main] - password entered successfully
+30:07 - 10:41:31 INFO c.c.f.BaseClass [main] - Clicking next button successfully
+30:07 - 10:41:45 INFO c.c.f.BaseClass [main] - Verify assessment is present.
+30:07 - 10:41:47 INFO c.c.f.BaseClass [main] - Clicking assessment Assign button successfully
+30:07 - 10:41:51 INFO c.c.f.BaseClass [main] - Clicking Review page next button successfully
+30:07 - 10:42:06 INFO c.c.f.BaseClass [main] - Select all students from assignee list
+30:07 - 10:42:07 INFO c.c.f.BaseClass [main] - Clicking Quiz radio button successfully
+30:07 - 10:42:07 INFO c.c.f.BaseClass [main] - Clicking Schedule page Assign button
+30:07 - 10:42:07 INFO c.c.f.BaseClass [main] - Verify Assign confirmation box test
+30:07 - 10:42:07 INFO c.c.f.BaseClass [main] - Click on Confirm button
+30:07 - 10:42:31 INFO c.c.f.BaseClass [main] - Clicking pdf button successfully
+30:07 - 10:42:33 INFO c.c.f.BaseClass [main] - Page scroll till end
+30:07 - 10:42:43 INFO c.c.f.BaseClass [main] - Switching PDF window to main window
+30:07 - 10:42:48 INFO c.c.f.BaseClass [main] - Clicking share button successfully
+30:07 - 10:42:49 INFO c.c.f.BaseClass [main] - Clicking create assessment button
+30:07 - 11:16:03 INFO c.c.f.BaseClass [main] - Login button clicking successfully
+30:07 - 11:16:03 INFO c.c.f.BaseClass [main] - clear email input area.
+30:07 - 11:16:03 INFO c.c.f.BaseClass [main] - email entered successfully
+30:07 - 11:16:05 INFO c.c.f.BaseClass [main] - clear password input area.
+30:07 - 11:16:05 INFO c.c.f.BaseClass [main] - password entered successfully
+30:07 - 11:16:07 INFO c.c.f.BaseClass [main] - Clicking next button successfully
+30:07 - 11:16:21 INFO c.c.f.BaseClass [main] - Verify assessment is present.
+30:07 - 11:16:23 INFO c.c.f.BaseClass [main] - Clicking assessment Assign button successfully
+30:07 - 11:16:28 INFO c.c.f.BaseClass [main] - Clicking Review page next button successfully
+30:07 - 11:16:43 INFO c.c.f.BaseClass [main] - Select all students from assignee list
+30:07 - 11:16:44 INFO c.c.f.BaseClass [main] - Clicking Quiz radio button successfully
+30:07 - 11:16:44 INFO c.c.f.BaseClass [main] - Clicking Schedule page Assign button
+30:07 - 11:16:44 INFO c.c.f.BaseClass [main] - Verify Assign confirmation box test
+30:07 - 11:16:44 INFO c.c.f.BaseClass [main] - Click on Confirm button
+30:07 - 11:17:07 INFO c.c.f.BaseClass [main] - Clicking pdf button successfully
+30:07 - 11:17:09 INFO c.c.f.BaseClass [main] - Page scroll till end
+30:07 - 11:17:19 INFO c.c.f.BaseClass [main] - Switching PDF window to main window
+30:07 - 11:17:24 INFO c.c.f.BaseClass [main] - Clicking share button successfully
+30:07 - 11:17:25 INFO c.c.f.BaseClass [main] - Clicking create assessment button
+30:07 - 11:19:08 INFO c.c.f.BaseClass [main] - Login button clicking successfully
+30:07 - 11:19:09 INFO c.c.f.BaseClass [main] - clear email input area.
+30:07 - 11:19:09 INFO c.c.f.BaseClass [main] - email entered successfully
+30:07 - 11:19:11 INFO c.c.f.BaseClass [main] - clear password input area.
+30:07 - 11:19:11 INFO c.c.f.BaseClass [main] - password entered successfully
+30:07 - 11:19:13 INFO c.c.f.BaseClass [main] - Clicking next button successfully
+30:07 - 13:37:43 INFO c.c.f.BaseClass [main] - Login button clicking successfully
+30:07 - 13:37:43 INFO c.c.f.BaseClass [main] - clear email input area.
+30:07 - 13:37:44 INFO c.c.f.BaseClass [main] - email entered successfully
+30:07 - 13:37:46 INFO c.c.f.BaseClass [main] - clear password input area.
+30:07 - 13:37:46 INFO c.c.f.BaseClass [main] - password entered successfully
+30:07 - 13:37:48 INFO c.c.f.BaseClass [main] - Clicking next button successfully
+30:07 - 13:42:33 INFO c.c.f.BaseClass [main] - Login button clicking successfully
+30:07 - 13:42:33 INFO c.c.f.BaseClass [main] - clear email input area.
+30:07 - 13:42:34 INFO c.c.f.BaseClass [main] - email entered successfully
+30:07 - 13:42:38 INFO c.c.f.BaseClass [main] - clear password input area.
+30:07 - 13:42:39 INFO c.c.f.BaseClass [main] - password entered successfully
+30:07 - 13:42:41 INFO c.c.f.BaseClass [main] - Clicking next button successfully
+30:07 - 13:43:18 INFO c.c.f.BaseClass [main] - Verify assessment is present.
+30:07 - 13:43:21 INFO c.c.f.BaseClass [main] - Clicking assessment Assign button successfully
+30:07 - 13:43:26 INFO c.c.f.BaseClass [main] - Clicking Review page next button successfully
+30:07 - 13:43:41 INFO c.c.f.BaseClass [main] - Select all students from assignee list
+30:07 - 13:43:42 INFO c.c.f.BaseClass [main] - Clicking Quiz radio button successfully
+30:07 - 13:43:42 INFO c.c.f.BaseClass [main] - Clicking Schedule page Assign button
+30:07 - 13:43:42 INFO c.c.f.BaseClass [main] - Verify Assign confirmation box test
+30:07 - 13:43:42 INFO c.c.f.BaseClass [main] - Click on Confirm button
+30:07 - 13:44:05 INFO c.c.f.BaseClass [main] - Clicking pdf button successfully
+30:07 - 13:44:07 INFO c.c.f.BaseClass [main] - Page scroll till end
+30:07 - 13:44:17 INFO c.c.f.BaseClass [main] - Switching PDF window to main window
+30:07 - 13:44:22 INFO c.c.f.BaseClass [main] - Clicking share button successfully
+30:07 - 13:44:23 INFO c.c.f.BaseClass [main] - Clicking create assessment button
+30:07 - 14:35:11 INFO c.c.f.BaseClass [main] - Login button clicking successfully
+30:07 - 14:35:11 INFO c.c.f.BaseClass [main] - clear email input area.
+30:07 - 14:35:11 INFO c.c.f.BaseClass [main] - email entered successfully
+30:07 - 14:35:13 INFO c.c.f.BaseClass [main] - clear password input area.
+30:07 - 14:35:13 INFO c.c.f.BaseClass [main] - password entered successfully
+30:07 - 14:35:16 INFO c.c.f.BaseClass [main] - Clicking next button successfully
+30:07 - 14:35:31 INFO c.c.f.BaseClass [main] - Verify assessment is present.
+30:07 - 14:35:34 INFO c.c.f.BaseClass [main] - Clicking assessment Assign button successfully
+30:07 - 14:35:38 INFO c.c.f.BaseClass [main] - Clicking Review page next button successfully
+30:07 - 14:35:54 INFO c.c.f.BaseClass [main] - Select all students from assignee list
+30:07 - 14:35:59 INFO c.c.f.BaseClass [main] - Clicking Quiz radio button successfully
+30:07 - 14:35:59 INFO c.c.f.BaseClass [main] - Clicking Schedule page Assign button
+30:07 - 14:35:59 INFO c.c.f.BaseClass [main] - Verify Assign confirmation box test
+30:07 - 14:35:59 INFO c.c.f.BaseClass [main] - Click on Confirm button
+30:07 - 14:36:22 INFO c.c.f.BaseClass [main] - Clicking pdf button successfully
+30:07 - 14:36:24 INFO c.c.f.BaseClass [main] - Page scroll till end
+30:07 - 14:36:34 INFO c.c.f.BaseClass [main] - Switching PDF window to main window
+30:07 - 14:36:39 INFO c.c.f.BaseClass [main] - Clicking share button successfully
+30:07 - 14:36:40 INFO c.c.f.BaseClass [main] - Clicking create assessment button
+31:07 - 08:16:04 INFO c.c.f.BaseClass [TestNG-tests-2] - Login button clicking successfully
+31:07 - 08:16:05 INFO c.c.f.BaseClass [TestNG-tests-2] - clear email input area.
+31:07 - 08:16:05 INFO c.c.f.BaseClass [TestNG-tests-1] - clear email input area.
+31:07 - 08:16:06 INFO c.c.f.BaseClass [TestNG-tests-2] - email entered successfully
+31:07 - 08:16:06 INFO c.c.f.BaseClass [TestNG-tests-1] - email entered successfully
+31:07 - 08:19:55 INFO c.c.f.BaseClass [TestNG-tests-1] - Login button clicking successfully
+31:07 - 08:19:55 INFO c.c.f.BaseClass [TestNG-tests-1] - clear email input area.
+31:07 - 08:19:56 INFO c.c.f.BaseClass [TestNG-tests-1] - email entered successfully
+31:07 - 08:19:58 INFO c.c.f.BaseClass [TestNG-tests-1] - clear password input area.
+31:07 - 08:19:58 INFO c.c.f.BaseClass [TestNG-tests-1] - password entered successfully
+31:07 - 08:20:00 INFO c.c.f.BaseClass [TestNG-tests-1] - Clicking next button successfully
+02:08 - 11:43:22 INFO c.c.f.BaseClass [main] - Login button clicking successfully
+02:08 - 11:43:23 INFO c.c.f.BaseClass [main] - clear email input area.
+02:08 - 11:43:23 INFO c.c.f.BaseClass [main] - email entered successfully
+02:08 - 11:43:25 INFO c.c.f.BaseClass [main] - clear password input area.
+02:08 - 11:43:25 INFO c.c.f.BaseClass [main] - password entered successfully
+02:08 - 11:43:27 INFO c.c.f.BaseClass [main] - Clicking next button successfully
+02:08 - 11:43:41 INFO c.c.f.BaseClass [main] - Verify assessment is present.
+02:08 - 11:43:45 INFO c.c.f.BaseClass [main] - Clicking assessment Assign button successfully
+02:08 - 11:43:49 INFO c.c.f.BaseClass [main] - Clicking Review page next button successfully
+02:08 - 11:44:05 INFO c.c.f.BaseClass [main] - Select all students from assignee list
+02:08 - 11:44:06 INFO c.c.f.BaseClass [main] - Clicking Quiz radio button successfully
+02:08 - 11:44:06 INFO c.c.f.BaseClass [main] - Clicking Schedule page Assign button
+02:08 - 11:44:06 INFO c.c.f.BaseClass [main] - Verify Assign confirmation box test
+02:08 - 11:44:06 INFO c.c.f.BaseClass [main] - Click on Confirm button
+02:08 - 11:44:28 INFO c.c.f.BaseClass [main] - Clicking pdf button successfully
+02:08 - 11:44:30 INFO c.c.f.BaseClass [main] - Page scroll till end
+02:08 - 11:44:40 INFO c.c.f.BaseClass [main] - Switching PDF window to main window
+02:08 - 11:44:45 INFO c.c.f.BaseClass [main] - Clicking share button successfully
+02:08 - 11:44:47 INFO c.c.f.BaseClass [main] - Clicking create assessment button
